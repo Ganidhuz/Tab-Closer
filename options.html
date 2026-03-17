@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Closer - Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body class="bg-zinc-50/50 dark:bg-zinc-950 min-h-screen py-12 px-4 transition-colors duration-200">
+  <div class="max-w-xl mx-auto space-y-8 relative">
+
+    <!-- Theme Switcher -->
+    <div class="absolute -top-8 right-0">
+      <button id="theme-toggle" class="p-2 rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all">
+        <!-- Sun Icon (visible in dark mode) -->
+        <svg id="sun-icon" class="w-5 h-5 text-yellow-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l.707-.707M6.343 6.343l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+        </svg>
+        <!-- Moon Icon (visible in light mode) -->
+        <svg id="moon-icon" class="w-5 h-5 text-zinc-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Header -->
+    <div class="space-y-2 text-center">
+      <div class="inline-flex items-center justify-center p-3 bg-white dark:bg-zinc-900 border dark:border-zinc-800 rounded-2xl shadow-sm mb-4">
+        <svg class="w-8 h-8 text-red-500" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="128" height="128" rx="30" fill="currentColor"/>
+          <path d="M50 58L78 86M78 58L50 86" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h1 class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">Tab Closer</h1>
+      <p class="text-zinc-500 dark:text-zinc-400 max-sm mx-auto">Automatically close tabs containing these keywords in the title or URL.</p>
+    </div>
+
+    <!-- Main Card -->
+    <div class="bg-white dark:bg-zinc-900 border dark:border-zinc-800 rounded-xl shadow-sm overflow-hidden">
+      <div class="p-6 border-b dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50">
+        <h2 class="text-sm font-semibold text-zinc-900 dark:text-zinc-50 uppercase tracking-wider">Keywords Configuration</h2>
+      </div>
+
+      <div class="p-6 space-y-6">
+        <!-- Input Group -->
+        <div class="flex gap-2">
+          <input type="text" id="keyword-input"
+            class="input-base dark:bg-zinc-950 dark:border-zinc-800 dark:text-zinc-50 dark:placeholder:text-zinc-600"
+            placeholder="e.g. youtube, netflix, distract">
+          <button id="add-btn" class="btn-primary dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200">Add</button>
+        </div>
+
+        <!-- Keyword List Container -->
+        <div class="space-y-3">
+          <h3 class="text-xs font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Active Keywords</h3>
+          <div id="keyword-list" class="flex flex-wrap gap-2">
+            <!-- Keywords injected here -->
+          </div>
+          <div id="empty-state" class="hidden text-center py-8">
+            <p class="text-sm text-zinc-400 dark:text-zinc-500 italic">No keywords added yet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-6 py-4 bg-zinc-50 dark:bg-zinc-900/50 border-t dark:border-zinc-800 flex justify-between items-center">
+        <div id="status" class="text-xs font-medium text-zinc-500 dark:text-zinc-400 h-4"></div>
+        <p class="text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-tighter">Settings are synced automatically</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center">
+      <p class="text-xs text-zinc-400 dark:text-zinc-600">Created by Ganidhu x Baymax</p>
+    </div>
+
+  </div>
+  <script src="options.js"></script>
+</body></html>

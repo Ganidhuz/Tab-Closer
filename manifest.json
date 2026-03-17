@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Closer",
+  "version": "1.0",
+  "description": "Automatically closes tabs that contain specific keywords in the title or URL.",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "options.html",
+    "default_icon": "icon.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}

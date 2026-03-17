@@ -1,0 +1,13 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Plate -->
+  <rect width="128" height="128" rx="30" fill="#FF4757"/>
+  
+  <!-- Tab Shape -->
+  <path d="M30 45C30 42.2386 32.2386 40 35 40H93C95.7614 40 98 42.2386 98 45V88C98 90.7614 95.7614 93 93 93H35C32.2386 93 30 90.7614 30 88V45Z" fill="white" fill-opacity="0.15"/>
+  
+  <!-- Tab Header -->
+  <rect x="30" y="40" width="68" height="12" rx="5" fill="white"/>
+  
+  <!-- Close X -->
+  <path d="M50 58L78 86M78 58L50 86" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
