@@ -5,9 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tab Closer - Settings</title>
   <link rel="stylesheet" href="options.css">
+  <style>
+    /* Ensure fixed size for popup, but responsive centering for full tab */
+    body {
+      width: 400px;
+      min-height: 500px;
+      margin: 0 auto;
+    }
+    @media (min-width: 401px) {
+      body {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 2rem 0;
+      }
+      .app-container {
+        width: 400px;
+        min-height: 500px;
+      }
+    }
+  </style>
 </head>
-<body class="bg-zinc-50/50 dark:bg-zinc-950 min-h-[500px] w-[400px] py-8 px-4 transition-colors duration-200 overflow-x-hidden">
-  <div class="mx-auto space-y-8 relative">
+<body class="bg-zinc-50/50 dark:bg-zinc-950 transition-colors duration-200 overflow-x-hidden">
+  <div class="app-container space-y-8 relative px-4 py-8">
+
 
     <!-- Header -->
     <div class="space-y-2 text-center">
@@ -71,6 +94,6 @@
       <p class="text-xs text-zinc-400 dark:text-zinc-600">Created by Ganidhu x Baymax</p>
     </div>
 
-  </div>
+  </div> <!-- End app-container -->
   <script src="options.js"></script>
 </body></html>
